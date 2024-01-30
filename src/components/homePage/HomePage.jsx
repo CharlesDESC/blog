@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useToken } from '../../context/tokenContext'
 import { Header } from '../header/Header'
 import { useArticles } from '../../hook/useArticles'
 import { Link } from 'react-router-dom'

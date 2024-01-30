@@ -1,9 +1,4 @@
 /* Styles pour la liste des articles */
-.article-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
 /* Styles pour chaque carte d'article */
 .article-card {
@@ -18,6 +13,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 300px;
+  margin-right: 15px;
 }
 
 /* Styles pour l'avatar de l'auteur */
@@ -70,4 +67,11 @@
 
 .read-more-link:hover {
   color: #0056b3;
+}
+
+.container {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

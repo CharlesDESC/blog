@@ -1,42 +1,34 @@
 import React, { useState } from 'react'
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material'
 
 const AddArticle = () => {
-  const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
+  const [open, setOpen] = useState(false)
 
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value)
+  const handleClickOpen = () => {
+    setOpen(true)
   }
 
-  const handleContentChange = (e) => {
-    setContent(e.target.value)
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Ajouter ici la logique pour envoyer les données de l'article au serveur
-    // par exemple, en utilisant une requête HTTP POST
-    console.log('Titre:', title)
-    console.log('Contenu:', content)
-    // Réinitialiser les champs du formulaire
-    setTitle('')
-    setContent('')
+  const handleClose = () => {
+    setOpen(false)
   }
 
   return (
     <div>
-      <h2>Ajouter un article</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="title">Titre :</label>
-          <input type="text" id="title" value={title} onChange={handleTitleChange} />
-        </div>
-        <div>
-          <label htmlFor="content">Contenu :</label>
-          <textarea id="content" value={content} onChange={handleContentChange}></textarea>
-        </div>
-        <button type="submit">Ajouter</button>
-      </form>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        Ajouter un article
+      </Button>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Ajouter un article</DialogTitle>
+        <DialogContent>hello</DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Annuler
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Ajouter
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   )
 }

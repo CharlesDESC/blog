@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Header } from '../header/Header'
+import { Comments } from '../comments/Comments'
 
 export const ArticleDetailPage = () => {
   const { articleId } = useParams()
@@ -33,6 +34,7 @@ export const ArticleDetailPage = () => {
         <div className="article-content">
           <p>{article.content}</p>
         </div>
+        <Comments articleId={articleId} />
       </div>
     </div>
   )

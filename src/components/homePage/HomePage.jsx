@@ -9,7 +9,6 @@ export const HomePage = () => {
   const token = localStorage.getItem('token')
   const navigate = useNavigate()
   const { articles } = useArticles()
-
   if (token === null) {
     navigate('/login')
     return null
@@ -22,7 +21,7 @@ export const HomePage = () => {
       <div className="article-list">
         {console.log(articles)}
         {articles.map((article, key) => (
-          <ArticleCard index={key} article={article} />
+          <ArticleCard index={key + 1} article={article} />
         ))}
       </div>
     </div>

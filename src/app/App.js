@@ -1,16 +1,13 @@
 import './App.css'
 import './reset.css'
 
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Login } from '../components/login/Login'
 import { Register } from '../components/register/Register'
-import { Header } from '../components/header/Header'
 import { HomePage } from '../components/homePage/HomePage'
 import { ArticleDetailPage } from '../components/ArticleDetailsPage/ArticleDetailsPage';
-
 import { TokenProvider } from '../context/tokenContext'
-
 import { useAuth } from '../hook/useToken'
 
 function App() {

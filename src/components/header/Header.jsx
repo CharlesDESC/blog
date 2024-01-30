@@ -2,8 +2,6 @@ import React from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-import logo from '../../assets/img/ynov.png'
-
 export const Header = () => {
   const deco = () => {
     localStorage.removeItem('token')
@@ -18,7 +16,7 @@ export const Header = () => {
       </Link>
       {token ? (
         <div className="registerWrapper">
-          <Link onClick={deco}>deconection</Link>
+          <Link onClick={deco}>deconnexion</Link>
         </div>
       ) : (
         <div className="registerWrapper">

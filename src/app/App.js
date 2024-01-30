@@ -7,6 +7,7 @@ import { Login } from '../components/login/Login'
 import { Register } from '../components/register/Register'
 import { Header } from '../components/header/Header'
 import { HomePage } from '../components/homePage/HomePage'
+import { ArticleDetailPage } from '../components/ArticleDetailsPage/ArticleDetailsPage';
 
 import { TokenProvider } from '../context/tokenContext'
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/articles/:articleId" element={<ArticleDetailPage />} />
         </Routes>
       </BrowserRouter>
     </TokenProvider>

@@ -4,7 +4,7 @@ import { useToken } from '../../context/tokenContext'
 import { Header } from '../header/Header'
 import { useArticles } from '../../hook/useArticles'
 import { Link } from 'react-router-dom'
-
+import '../homePage/HomePage.css'
 export const HomePage = () => {
   const token = localStorage.getItem('token')
   const navigate = useNavigate()
@@ -47,7 +47,6 @@ const ArticleCard = ({ article, index }) => {
       <Link to={`/articles/${index}`} className="read-more-link">
         Lire la suite
       </Link>
-      {/* Utilisez Link pour créer le lien */}
     </div>
   )
 }

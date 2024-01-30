@@ -18,7 +18,7 @@ export const Header = () => {
       </Link>
       {token ? (
         <div className="registerWrapper">
-          <Link onClick={deco}>deconection</Link>
+          <Link onClick={deco}>deconnexion</Link>
         </div>
       ) : (
         <div className="registerWrapper">
